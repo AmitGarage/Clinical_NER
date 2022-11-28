@@ -4,7 +4,7 @@ from torch_ner_model import build_torch_ner_model
 from torch_ner_pipe import make_torch_entity_recognizer
 
 
-def main(models: str, default_text: str):
+def main(models: str = None, default_text: str = None):
     models = [name.strip() for name in models.split(",")]
     labels = ["person", "problem", "pronoun", "test", "treatment"]
     spacy_streamlit.visualize(
