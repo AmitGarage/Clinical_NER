@@ -5,6 +5,8 @@ from torch_ner_pipe import make_torch_entity_recognizer
 
 
 def main(models: str = None, default_text: str = None):
+    models = "training_trf/model-best"
+    test = "The patient had surgery."
     models = [name.strip() for name in models.split(",")]
     labels = ["person", "problem", "pronoun", "test", "treatment"]
     spacy_streamlit.visualize(
